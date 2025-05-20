@@ -1,5 +1,5 @@
 *{ margin: 0%; padding: 0px; box-sizing: border-box;}
 
 body{
-  width: 100vw; height: 100vh; background-color: rgb(237, 181, 233);
+  width: 100vw; background-image: linear-gradient(to right, #fff7ad, #ffa9f9db); background-attachment: fixed; box-shadow: 2px 4px 20px rgb(61, 58, 49) inset; cursor: context-menu; overflow-x: hidden;
 }
