@@ -1,7 +1,7 @@
 const Footer = () =>{
     return(
         <footer>
-            <h4>Projeto de anacnr &copy;</h4>
+            <h4>Projeto de anacnr &copy; alguns componentes com AI</h4>
         </footer>
     )
 }
