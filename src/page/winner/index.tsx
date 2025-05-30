@@ -1,4 +1,4 @@
-import pic from '../../assets/img/user-min.png'
+
 import { useParams } from 'react-router-dom'
 import './css/winner.module.css'
 
@@ -9,7 +9,7 @@ const Winner = () =>{
     return(
         <div>
             <h1>Parabéns, você venceu!</h1>
-            <img src={pic} alt="Usuário"/>
+            <img src={'pic'} alt="Usuário"/>
             <h2><strong>{name}</strong></h2>
         </div>
     )

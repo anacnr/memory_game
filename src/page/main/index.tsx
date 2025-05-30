@@ -1,18 +1,23 @@
-import { useState } from 'react'
-import './css/main.module.css'
-import kid from '../../assets/img/user-min.png'
+import { useState, ReactNode, createContext } from 'react'
+import kid  from "./img/user-min.png";
+import back from "./img/back-img-min.png";
+import styles from './css/main.module.css'
+import { Header } from '../../component/header';
 
-import animals from '../../assets/img/animais-min.png'
-import children from '../../assets/img/crianças-no-ceu-min.png'
-import baby from '../../assets/img/jesus-bebe-min.png'
-import jesus_christ from '../../assets/img/jesus-com-a-cruz-min.png'
-import jesus_reigns from '../../assets/img/jesus-com-anjos-min.png'
+interface TestProps{
+count : number
+}
 
-import back from '../../assets/img/back-img-min.png'
+interface UserProviderProps{
+    children : ReactNode
+}
+
+export const my_count = createContext({} as TestProps)
+
+
 
 //Pág principal
 const Memory_Game = () =>{
-
     const [name_class, setNameClass] = useState<string | null>("")
     const [number_card, setNumberCard] = useState<string>("")
     const [count, setCount] = useState(0)
@@ -55,49 +60,19 @@ const Memory_Game = () =>{
             }
         }
         
-        
+    }
+
+    //Função para enviar a pontuação para o header
+    function Counting(){
+    setPoint(point + 1)
+    console.log(point);
     }
 
     return(
-        <div>
-            <header>
-                <span>
-                    <output>Nome</output>
-                </span>
-                <div><img src={kid} alt="Usuário-img"/>
-                <hr />
-                <p>{point}</p>
-                </div>
-            </header>
-            <main>
-                <h1>encontre o par da imagem!</h1>
-                
-                    <section>
-                    <div className='div-animals'> <img className='animals' onClick={myClass} src={back} alt="" data-card = "0" /></div>
-                    <div className='div-children'> <img className='children' onClick={myClass} src={back} alt="" data-card = "1" /></div>
-                    <div className='div-baby'> <img className='baby' onClick={myClass} src={back} alt="" data-card = "2" /></div>
-                    <div className='div-jesus_christ'> <img className='jesus_christ' onClick={myClass} src={back} alt="" data-card = "3" /></div>
-                        
-                    </section>
-                    <section>
-                        <div className='div-children'><img className='children' onClick={myClass} src={back} alt="" data-card = "4" /></div>
-                        <div className='div-jesus_reigns'><img className='jesus_reigns' onClick={myClass} src={back} alt="" data-card = "5" /></div>
-                        <div className='div-jesus_christ'><img className='jesus_christ' onClick={myClass} src={back} alt="" data-card = "6" /></div>
-                        <div className='div-animals'><img onClick={myClass} className='animals' src={back} alt="" data-card = "7" /></div>
-                    </section>
-                    <section>
-                        <div className='div-baby'><img className='baby' onClick={myClass} src={back} alt="" data-card = "8" /></div>
-                        <div className='div-jesus_reigns'><img className='jesus_reigns' onClick={myClass} src={back} alt="" data-card = "9" /></div>
-                        <div className='div-four'><img src={back} className='four' onClick={myClass} alt="" data-card = "10"/></div>
-                        <div className='div-four'><img src={back} className='four' onClick={myClass} alt="" data-card = "11"/></div>
-                    </section>                
-                <aside>
-                    <img src="#" alt="" />
-                </aside>
-                <aside>
-                    <img src="#" alt="" />
-                </aside>
-            </main>
+        <div className={styles.conainer_main}>
+            <Header param = { point }/>
+            <h1 className={styles.title}>encontre o par da imagem!</h1>
+            <hr />
         </div>
     )
 }
