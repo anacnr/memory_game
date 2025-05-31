@@ -9,7 +9,7 @@ const exportRoutes = createBrowserRouter([
       element : <Layout/>,
       children : [
           {
-            path : '/',
+            path : '/main',
             element : <Memory_Game/>
           },
           {
@@ -17,7 +17,7 @@ const exportRoutes = createBrowserRouter([
             element : <Winner/>
           },
           {
-            path : '/login',
+            path : '/',
             element : <Login/>
           }
       ]

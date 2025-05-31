@@ -1,6 +1,11 @@
 import { useState } from 'react'
-import kid  from "./img/user-min.png";
 import back from "./img/back-img-min.png";
+import card_animals from "./img/animais-min.png"
+import card_children from "./img/crianças-no-ceu-min.png"
+import card_baby_jesus from "./img/jesus-bebe-min.png"
+import card_jesus_cross from "./img/jesus-com-a-cruz-min.png"
+import card_angels from "./img/jesus-com-anjos-min.png"
+
 import styles from './css/main.module.css'
 import { Header } from '../../component/header';
 
@@ -13,41 +18,34 @@ const Memory_Game = () =>{
 
     const myClass = ( event : React.MouseEvent<HTMLImageElement> ) =>{
         const my_card = event.currentTarget
-        let class_card = my_card.classList[0]
-        let data_card = my_card.dataset.card   
-
-        my_card.style.opacity = '0'
+        const  first_card_picked = my_card.classList[0]
+        //Precisa para que o usuário não clique na mesma imagem que virou pela primeira vez e dê como par encontrado
+        const data_card = my_card.dataset.card
+        
+        my_card.style.opacity = '0'  
         
         if(count == 0){
             if(data_card != undefined){
-            console.log(`PRIMEIRO CARD ESCOLHIDO CLASSE: ${class_card} CARD: ${data_card}`);
-            setNameClass(class_card)
-            setNumberCard(data_card) 
-            setCount(1)
+                setNameClass(first_card_picked)
+                setNumberCard(data_card)
+                setCount(1)
             }
         }
-        else if(count == 1){
-            //name_class é o primeiro card escolhido
-            if(class_card == name_class && data_card != number_card){
-                console.log("Achei o par!");
-                console.log(`class_card: ${class_card} data_card: ${data_card}`);
-                console.log(`name_class: ${name_class} number_card: ${number_card}`);
-                my_card.style.opacity = '0'
+        else if (count == 1){
+            if(first_card_picked == name_class && data_card != number_card){
+                console.log(`first_card_picked : ${first_card_picked} | name_class : ${name_class} | data_card : ${data_card} | number_card : ${number_card}`);
+                
+                console.log("par encontrado!");
                 setPoint(point + 1)
-                //Para achar outros pares
-                setCount(0)
             }
             else{
-                console.log("Não é meu par!") 
-                console.log(`class_card: ${class_card} data_card: ${data_card}`);
-                console.log(`name_class: ${name_class} number_card: ${number_card}`); 
-
-                setTimeout(() => {
+                console.log("par não encontrado!");
+                console.log(`first_card_picked : ${first_card_picked} | name_class : ${name_class} | data_card : ${data_card} | number_card : ${number_card}`);
+                setTimeout(()=>{
                     my_card.style.opacity = '1'
-                }, 600);
+                }, 600)
             }
         }
-        
     }
 
     return(
@@ -55,6 +53,26 @@ const Memory_Game = () =>{
             <Header param = { point }/>
             <h1 className={styles.title}>encontre o par da imagem!</h1>
             <hr />
+            <section className={styles.section_main}>
+                <div className={styles.div_animals} > <img src ={back} onClick={myClass} className='img_animals' data-card = '0' alt="animals" /></div>
+                <div className={styles.div_children} ><img src ={back} onClick={myClass} className='img_children' data-card = '1' alt="children" /></div>
+                <div className={styles.div_baby_jesus} data-set = '2' ><img src={back} alt="baby_jesus" /></div>
+            </section>
+            <section className={styles.section_main}>
+                <div className={styles.div_jesus_cross} ><img src ={back} onClick={myClass} data-set = '3'alt="jesus_cross" /> </div>
+                <div className={styles.div_angels} ><img src ={back} onClick={myClass} data-set = '4' alt="angels" /></div>
+                <div className={styles.div_children}><img src={back} onClick={myClass} data-set = '5' alt="baby_jesus" /></div>
+            </section>
+            <section className={styles.section_main}>
+                <div className={styles.div_baby_jesus}><img src ={back} onClick={myClass} data-set = '6' alt="jesus_cross" /></div>
+                <div className={styles.div_jesus_cross}><img src ={back} onClick={myClass} data-set = '7' alt="angels" /></div>
+                <div className={styles.div_animals}><img src={back} onClick={myClass} data-set = '8' alt="baby_jesus" /></div>
+            </section>
+            <section className={styles.section_main}>
+                <div className={styles.div_angels}><img src ={back} onClick={myClass} data-set = '9' alt="jesus_cross" /></div>
+                <div className={styles.div_jesus_cross}><img src ={back} onClick={myClass} data-set = '10' alt="angels" /></div>
+                <div className={styles.div_animals}><img src={back} onClick={myClass} data-set = '11' alt="baby_jesus" /></div>
+            </section>
         </div>
     )
 }

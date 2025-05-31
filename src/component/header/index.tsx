@@ -11,9 +11,7 @@ interface TestProps{
 const Header = ({param} : TestProps) =>{
 
     const research = useContext(UserContext)
-    const { player, toSavePlayer } = research
-
-    console.log("Cade o nome: ", player.length);
+    const { player } = research
     
     return(
         <header className= {styles.header_user} >
