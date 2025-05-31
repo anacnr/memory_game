@@ -1,7 +1,9 @@
+import styles from './css/footer.module.css'
+
 const Footer = () =>{
     return(
-        <footer>
-            <h4>Projeto de anacnr &copy; alguns componentes com AI</h4>
+        <footer className={styles.footer_author}>
+            <h4 className={styles.h4_author}>Projeto de anacnr &copy; Todos os direitos reservados</h4>
         </footer>
     )
 }

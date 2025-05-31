@@ -1,0 +1,137 @@
+* {margin:  0%; padding: 0px; box-sizing: border-box; cursor: context-menu;}
+
+@media screen and (max-width:600px) {
+  .div_login{
+   background-image: linear-gradient(to bottom, black 73%, #4401affd);  width: 100%; height: 90vh; display: flex; flex-direction: column; align-items: center; justify-content: center; 
+
+   & .h1_login{
+    text-align: center; text-shadow: 1px 0px 2px black; color: white; letter-spacing: 2px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 2em; margin: 50px 0px;
+   }
+
+    & .h2_login{
+    text-align: center; text-shadow: 1px 0px 2px black; color: white; letter-spacing: 2px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 1.5em; margin: 30px 0px;
+   }
+
+   & .img_login{
+    width: 40%; display: block; margin: auto 0; border-radius: 3px; box-shadow: 1px 3px 15px rgba(255, 255, 255, 0.838); opacity: 0.9;
+   }
+}
+
+.div_login > .form_login{
+     height: 20%; display: flex; flex-direction: column; align-items: center; justify-content: center;
+
+    & .input_name{
+        width: 90%; text-align: center; border-radius: 3px; border-color: transparent; background-color: rgba(242, 238, 238, 0.947); padding: 3px 0px; box-shadow: 2px 1px 6px black inset; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; letter-spacing: 2px; text-align: left; text-indent: 15px;
+    }
+
+    & .input_name:focus{
+        outline: 0;
+    }
+
+    & .input_sent{
+    width: 50%; text-align: center; border-radius: 3px; border-color: transparent; background-color: rgba(242, 238, 238, 0.947); padding: 4px 0px; box-shadow: 2px 1px 6px black; margin-top: 30px; cursor: pointer;
+    }
+}  
+}
+
+@media (min-width:600px) and (max-width:768px){
+  .div_login{
+   background-image: linear-gradient(to bottom, black 75%, #4401affd);  width: 100%; height: 90vh; display: flex; flex-direction: column; align-items: center; justify-content: center; 
+
+   & .h1_login{
+    text-align: center; text-shadow: 1px 0px 2px black; color: white; letter-spacing: 2px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 2em; margin: 50px 0px;
+   }
+
+    & .h2_login{
+    text-align: center; text-shadow: 1px 0px 2px black; color: white; letter-spacing: 2px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 1.5em; margin: 30px 0px;
+   }
+
+   & .img_login{
+    width: 250px; display: block; margin: auto 0; border-radius: 3px; box-shadow: 1px 3px 15px rgba(255, 255, 255, 0.838); opacity: 0.9;
+   }
+}
+
+.div_login > .form_login{
+     height: 20%; display: flex; flex-direction: column; align-items: center; justify-content: center;
+
+    & .input_name{
+        width: 90%; text-align: center; border-radius: 3px; border-color: transparent; background-color: rgba(242, 238, 238, 0.947); padding: 3px 0px; box-shadow: 2px 1px 6px black inset; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; letter-spacing: 2px; text-align: left; text-indent: 15px;
+    }
+
+    & .input_name:focus{
+        outline: 0;
+    }
+
+    & .input_sent{
+    width: 50%; text-align: center; border-radius: 3px; border-color: transparent; background-color: rgba(242, 238, 238, 0.947); padding: 4px 0px; box-shadow: 2px 1px 6px black; margin-top: 30px; cursor: pointer;
+    }
+}  
+}
+
+@media (min-width:768px) and (max-width:992px){
+  .div_login{
+   background-image: linear-gradient(to bottom, black 76%, #4401affd);  width: 100%; height: 90vh; display: flex; flex-direction: column; align-items: center; justify-content: center; 
+
+   & .h1_login{
+    text-align: center; text-shadow: 1px 0px 2px black; color: white; letter-spacing: 2px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 2em; margin: 50px 0px;
+   }
+
+    & .h2_login{
+    text-align: center; text-shadow: 1px 0px 2px black; color: white; letter-spacing: 2px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 1.5em; margin: 30px 0px;
+   }
+
+   & .img_login{
+    width: 250px; display: block; margin: auto 0; border-radius: 3px; box-shadow: 1px 3px 15px rgba(255, 255, 255, 0.838); opacity: 0.9;
+   }
+}
+
+.div_login > .form_login{
+     height: 20%; display: flex; flex-direction: column; align-items: center; justify-content: center;
+
+    & .input_name{
+        width: 90%; text-align: center; border-radius: 3px; border-color: transparent; background-color: rgba(242, 238, 238, 0.947); padding: 3px 0px; box-shadow: 2px 1px 6px black inset; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; letter-spacing: 2px; text-align: left; text-indent: 15px;
+    }
+
+    & .input_name:focus{
+        outline: 0;
+    }
+
+    & .input_sent{
+    width: 50%; text-align: center; border-radius: 3px; border-color: transparent; background-color: rgba(242, 238, 238, 0.947); padding: 4px 0px; box-shadow: 2px 1px 6px black; margin-top: 30px; cursor: pointer;
+    }
+}  
+}
+
+@media (min-width:992px){
+  .div_login{
+   background-image: linear-gradient(to bottom, black 79%, #4401affd);  width: 100%; height: 90vh; display: flex; flex-direction: column; align-items: center; justify-content: center; 
+
+   & .h1_login{
+    text-align: center; text-shadow: 1px 0px 2px black; color: white; letter-spacing: 2px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 2em; margin: 50px 0px;
+   }
+
+    & .h2_login{
+    text-shadow: 1px 0px 2px black; color: white; letter-spacing: 2px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 1.5em; margin: 30px 0px; position: relative; right: 15%; bottom: 30%;
+   }
+
+   & .img_login{
+    width: 270px; border-radius: 3px; box-shadow: 1px 3px 15px rgba(255, 255, 255, 0.838); opacity: 0.9; position: relative;  top: 10%; left: 15%;
+   }
+}
+
+.div_login > .form_login{
+     height: 20%; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; right: 15%; bottom: 30%;
+
+    & .input_name{
+        width: 90%; text-align: center; border-radius: 3px; border-color: transparent; background-color: rgba(242, 238, 238, 0.947); padding: 3px 0px; box-shadow: 2px 1px 6px black inset; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; letter-spacing: 2px; text-align: left; text-indent: 15px;
+    }
+
+    & .input_name:focus{
+        outline: 0;
+    }
+
+    & .input_sent{
+    width: 50%; text-align: center; border-radius: 3px; border-color: transparent; background-color: rgba(242, 238, 238, 0.947); padding: 4px 0px; box-shadow: 2px 1px 6px black; margin-top: 30px; cursor: pointer;
+    }
+}  
+}

@@ -1,20 +1,8 @@
-import { useState, ReactNode, createContext } from 'react'
+import { useState } from 'react'
 import kid  from "./img/user-min.png";
 import back from "./img/back-img-min.png";
 import styles from './css/main.module.css'
 import { Header } from '../../component/header';
-
-interface TestProps{
-count : number
-}
-
-interface UserProviderProps{
-    children : ReactNode
-}
-
-export const my_count = createContext({} as TestProps)
-
-
 
 //Pág principal
 const Memory_Game = () =>{
@@ -46,7 +34,7 @@ const Memory_Game = () =>{
                 console.log(`name_class: ${name_class} number_card: ${number_card}`);
                 my_card.style.opacity = '0'
                 setPoint(point + 1)
-                //Para achar outro pares
+                //Para achar outros pares
                 setCount(0)
             }
             else{
@@ -60,12 +48,6 @@ const Memory_Game = () =>{
             }
         }
         
-    }
-
-    //Função para enviar a pontuação para o header
-    function Counting(){
-    setPoint(point + 1)
-    console.log(point);
     }
 
     return(

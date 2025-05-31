@@ -1,0 +1,19 @@
+@media screen and (max-width:600px) {
+  .footer_author{
+   background-color: rgba(230, 236, 230, 0.507); 
+}  
+
+    .h4_author{
+        text-align: center; margin-top: 20px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-weight: 400; font-style: italic; font-size: 0.9em;
+    }
+}
+
+@media (min-width:600px){
+   .footer_author{
+   background-color: rgba(230, 236, 230, 0.507); 
+}  
+
+    .h4_author{
+        text-align: center; margin-top: 20px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-weight: 400; font-style: italic; font-size: 1em;
+    }   
+}

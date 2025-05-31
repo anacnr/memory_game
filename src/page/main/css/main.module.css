@@ -2,10 +2,6 @@
     margin: 0%; padding: 0px; box-sizing: border-box;
 }
 
-body{
-    background-image: linear-gradient(to right, #fff7ad, #FFA9F9);
-}
-
 @media screen and (max-width:600px) {
     
 }
