@@ -1,10 +1,12 @@
 
-import { useParams } from 'react-router-dom'
+import { useContext } from 'react'
+import { UserContext } from '../../context'
 import './css/winner.module.css'
 
 const Winner = () =>{
 
-    const { name } = useParams()
+    const research = useContext(UserContext)
+    let name = research.player
 
     return(
         <div>

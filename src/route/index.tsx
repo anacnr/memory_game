@@ -13,7 +13,7 @@ const exportRoutes = createBrowserRouter([
             element : <Memory_Game/>
           },
           {
-            path : '/winner/:name',
+            path : '/winner',
             element : <Winner/>
           },
           {
