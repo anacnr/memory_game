@@ -1,7 +1,8 @@
-
 import { useContext } from 'react'
 import { UserContext } from '../../context'
-import './css/winner.module.css'
+import styles from  './css/winner.module.css'
+
+import kid from '../main/img/user-min.png'
 
 const Winner = () =>{
 
@@ -9,10 +10,10 @@ const Winner = () =>{
     let name = research.player
 
     return(
-        <div>
-            <h1>Parabéns, você venceu!</h1>
-            <img src={'pic'} alt="Usuário"/>
-            <h2><strong>{name}</strong></h2>
+        <div className={styles.div_winner}>
+            <h1 className={styles.h1_winner}>Parabéns, você venceu!</h1>
+            <img src={kid} className={styles.img_winner} alt="Usuário"/>
+            <h2 className={styles.h2_winner}><strong>{name}Teste</strong></h2>
         </div>
     )
 }
