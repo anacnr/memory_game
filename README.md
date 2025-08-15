@@ -9,9 +9,7 @@ Currently, two official plugins are available:
 
 ## Joguinho de memória com React utilizando vite.
 
-### É preciso ter o Node.js instalado
-### É preciso ter Typescript instalado
-### É preciso ter React do Vite instalado
+### É preciso instalar o Node.js, Typescript e React do Vite
 
 Para rodar o jogo no navegador baixe as dependências do vite dentro do diretório raiz do jogo
 Depois rode o navegador local com npm run dev
@@ -19,6 +17,4 @@ Os pares devem ser encontrados até 5 quando será mostrado uma página do ganha
 
 ### Bom jogo! ^_^
 
-
 ### Ainda está em desenvolvimento. Foi utilizado AI para auxilio na construção e correção de erros de lógica.
-
