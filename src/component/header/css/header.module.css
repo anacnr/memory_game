@@ -11,7 +11,7 @@
         box-shadow: 2px 1px 6px rgba(0, 0, 0, 0.831); width: 25%; border-radius: 10px; background-color: rgba(0, 0, 0, 0.167); padding: 2px 0px; margin-left: 20px;
 
         & .p_user{
-            text-align: center; text-shadow: 1px 0px 2px black; color: white; letter-spacing: 2px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 0.8em;
+            text-align: center; text-shadow: 1px 0px 2px black; text-transform: uppercase; color: white; letter-spacing: 2px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 0.8em;
         }
     }
 
@@ -43,7 +43,7 @@
         box-shadow: 2px 1px 6px rgba(0, 0, 0, 0.831); width: 150px; border-radius: 10px; background-color: rgba(0, 0, 0, 0.167); padding: 2px 0px; margin-left: 30px;
 
         & .p_user{
-            text-align: center; text-shadow: 1px 0px 2px black; color: white; letter-spacing: 2px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 0.8em;
+            text-align: center; text-shadow: 1px 0px 2px black; text-transform: uppercase; color: white; letter-spacing: 2px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 0.8em;
         }
     }
 
@@ -75,7 +75,7 @@
         box-shadow: 2px 1px 6px rgba(0, 0, 0, 0.831); width: 160px; border-radius: 10px; background-color: rgba(0, 0, 0, 0.167); padding: 2px 0px; margin-left: 40px;
 
         & .p_user{
-            text-align: center; text-shadow: 1px 0px 2px black; color: white; letter-spacing: 2px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 0.8em;
+            text-align: center; text-shadow: 1px 0px 2px black; text-transform: uppercase; color: white; letter-spacing: 2px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 0.8em;
         }
     }
 
@@ -107,7 +107,7 @@
         box-shadow: 2px 1px 6px rgba(0, 0, 0, 0.831); width: 180px; border-radius: 10px; background-color: rgba(0, 0, 0, 0.167); padding: 2px 0px; margin-left: 60px;
 
         & .p_user{
-            text-align: center; text-shadow: 1px 0px 2px black; color: white; letter-spacing: 2px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 0.8em;
+            text-align: center; text-shadow: 1px 0px 2px black; text-transform: uppercase; color: white; letter-spacing: 2px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 0.8em;
         }
     }
 

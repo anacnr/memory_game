@@ -26,6 +26,10 @@
     background-image: url('../img/jesus-com-anjos-min.png');
  }
 
+ .section_main > .div_game_case{
+    background-image: url('../../../page/login/img/capamemory_game.png');
+ }
+
 @media screen and (max-width:600px) {
     .conainer_main{
     background-image: linear-gradient(to right, #fff7ad, #ffa9f9);

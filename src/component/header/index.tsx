@@ -16,7 +16,7 @@ const Header = ({param} : TestProps) =>{
     return(
         <header className= {styles.header_user} >
              <span className={styles.span_user}>
-                <p className={styles.p_user}>{player}</p>
+                <p className={styles.p_user}>{player ? player : "usuário"}</p>
                 </span>
                 <div className={styles.div_user}>
                     <img src={kid} alt="" className={styles.img_user} />

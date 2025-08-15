@@ -28,11 +28,7 @@ const Memory_Game = () =>{
                 setNameClass(first_card_picked)
                 setNumberCard(data_card)
                 setCount(1)
-            }
-
-            console.log(" if (count == 0) " , count);
-            console.log(first_card_picked);
-            
+            }           
         }
         else if (count == 1){
             if(first_card_picked == name_class && data_card != number_card){
@@ -40,7 +36,6 @@ const Memory_Game = () =>{
                 setPoint(point + 1)
                 console.log("PONTOS: " , point);
                 setCount(0)
-
                 if(point == 4){
                 setTimeout(()=>{
                     redirection('/winner')
@@ -54,8 +49,7 @@ const Memory_Game = () =>{
                     setNameClass("")
                     console.log(first_card_picked);
                     setCount(0)
-                }, 600)
-                
+                }, 600)               
             }
             else{
                 console.log("par não encontrado!");
@@ -88,8 +82,8 @@ const Memory_Game = () =>{
             </section>
             <section className={styles.section_main}>
                 <div className={styles.div_angels}><img src ={back} onClick={myClass} data-card = '9' className='img_angels' alt="angels" /></div>
-                <div className={styles.div_jesus_cross}><img src ={back} onClick={myClass} data-card = '10' className='img_jesus_cross' alt="angels" /></div>
-                <div className={styles.div_jesus_cross}><img src ={back} onClick={myClass} data-card = '11' className='img_jesus_cross' alt="angels" /></div>
+                <div className={styles.div_game_case}><img src ={back} onClick={myClass} data-card = '10' className='img_game_case' alt="game_case" /></div>
+                <div className={styles.div_game_case}><img src ={back} onClick={myClass} data-card = '11' className='img_game_case' alt="game_case" /></div>
             </section>
         </div>
     )

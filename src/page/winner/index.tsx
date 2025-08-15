@@ -10,11 +10,15 @@ const Winner = () =>{
     let name = research.player
 
     return(
+       
         <div className={styles.div_winner}>
             <h1 className={styles.h1_winner}>Parabéns, você venceu!</h1>
             <img src={kid} className={styles.img_winner} alt="Usuário"/>
-            <h2 className={styles.h2_winner}><strong>{name}Teste</strong></h2>
+          <h2 className={styles.h2_winner}><strong>{name ? name : "usuário" }</strong></h2>         
         </div>
+
+        
+
     )
 }
 
