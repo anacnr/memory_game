@@ -24,7 +24,7 @@ const Login = () =>{
         }
         else{
             toSavePlayer(player)
-            redirection("/")
+            redirection("/main")
         }
     }
 

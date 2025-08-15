@@ -1,7 +1,9 @@
 import { useState } from 'react'
-import kid  from "./img/user-min.png";
+import { useNavigate } from 'react-router-dom'
+
 import back from "./img/back-img-min.png";
 import styles from './css/main.module.css'
+
 import { Header } from '../../component/header';
 
 //Pág principal
@@ -11,50 +13,78 @@ const Memory_Game = () =>{
     const [count, setCount] = useState(0)
     const [point, setPoint] = useState(0)
 
+    const redirection = useNavigate()
+
     const myClass = ( event : React.MouseEvent<HTMLImageElement> ) =>{
         const my_card = event.currentTarget
-        let class_card = my_card.classList[0]
-        let data_card = my_card.dataset.card   
-
-        my_card.style.opacity = '0'
+        const  first_card_picked = my_card.classList[0]
+        //Precisa para que o usuário não clique na mesma imagem que virou pela primeira vez e dê como par encontrado
+        const data_card = my_card.dataset.card
         
+        my_card.style.opacity = '0'  
+             
         if(count == 0){
             if(data_card != undefined){
-            console.log(`PRIMEIRO CARD ESCOLHIDO CLASSE: ${class_card} CARD: ${data_card}`);
-            setNameClass(class_card)
-            setNumberCard(data_card) 
-            setCount(1)
-            }
+                setNameClass(first_card_picked)
+                setNumberCard(data_card)
+                setCount(1)
+            }           
         }
-        else if(count == 1){
-            //name_class é o primeiro card escolhido
-            if(class_card == name_class && data_card != number_card){
-                console.log("Achei o par!");
-                console.log(`class_card: ${class_card} data_card: ${data_card}`);
-                console.log(`name_class: ${name_class} number_card: ${number_card}`);
-                my_card.style.opacity = '0'
+        else if (count == 1){
+            if(first_card_picked == name_class && data_card != number_card){
+                console.log("par encontrado!");
                 setPoint(point + 1)
-                //Para achar outros pares
+                console.log("PONTOS: " , point);
                 setCount(0)
+                if(point == 4){
+                setTimeout(()=>{
+                    redirection('/winner')
+                },500)
+                }
+            }
+            else if(first_card_picked == name_class && data_card == number_card){
+                console.log("mesmo card!");
+                setTimeout(()=>{
+                    my_card.style.opacity = '1'
+                    setNameClass("")
+                    console.log(first_card_picked);
+                    setCount(0)
+                }, 600)               
             }
             else{
-                console.log("Não é meu par!") 
-                console.log(`class_card: ${class_card} data_card: ${data_card}`);
-                console.log(`name_class: ${name_class} number_card: ${number_card}`); 
-
-                setTimeout(() => {
+                console.log("par não encontrado!");
+                setTimeout(()=>{
                     my_card.style.opacity = '1'
-                }, 600);
-            }
+                }, 600)
+            } 
         }
-        
-    }
+    }     
 
     return(
         <div className={styles.conainer_main}>
             <Header param = { point }/>
             <h1 className={styles.title}>encontre o par da imagem!</h1>
             <hr />
+            <section className={styles.section_main}>
+                <div className={styles.div_animals} > <img src ={back} onClick={myClass} data-card = '0' className='img_animals'  alt="animals" /></div>
+                <div className={styles.div_children} > <img src ={back} onClick={myClass} data-card = '1' className='img_children' alt="children" /></div>
+                <div className={styles.div_baby_jesus}> <img src={back} onClick={myClass} data-card = '2' className='img_baby_jesus' alt="baby_jesus" /></div>
+            </section>
+            <section className={styles.section_main}>
+                <div className={styles.div_jesus_cross} ><img src ={back} onClick={myClass} data-card = '3' className='img_jesus_cross' alt="jesus_cross" /> </div>
+                <div className={styles.div_angels} ><img src ={back} onClick={myClass} data-card = '4' className='img_angels'  alt="angels" /></div>
+                <div className={styles.div_children}><img src={back} onClick={myClass} data-card = '5' className='img_children'  alt="baby_jesus" /></div>
+            </section>
+            <section className={styles.section_main}>
+                <div className={styles.div_baby_jesus}><img src ={back} onClick={myClass} data-card = '6' className='img_baby_jesus'  alt="jesus_cross" /></div>
+                <div className={styles.div_jesus_cross}><img src ={back} onClick={myClass} data-card = '7' className='img_jesus_cross'  alt="angels" /></div>
+                <div className={styles.div_animals}><img src={back} onClick={myClass} data-card = '8' className='img_animals'  alt="baby_jesus" /></div>
+            </section>
+            <section className={styles.section_main}>
+                <div className={styles.div_angels}><img src ={back} onClick={myClass} data-card = '9' className='img_angels' alt="angels" /></div>
+                <div className={styles.div_game_case}><img src ={back} onClick={myClass} data-card = '10' className='img_game_case' alt="game_case" /></div>
+                <div className={styles.div_game_case}><img src ={back} onClick={myClass} data-card = '11' className='img_game_case' alt="game_case" /></div>
+            </section>
         </div>
     )
 }
